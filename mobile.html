@@ -78,7 +78,7 @@
       border-radius: 3px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       color: #222222;
-      cursor: default;
+      cursor: pointer;
       font-family: inherit;
       font-size: 14px;
       min-width: 72px;
@@ -208,25 +208,67 @@
   <header class="topbar" aria-label="Language selection">
     <img class="emblem" src="data:image/png;base64,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" alt="Government emblem" width="48" height="45">
     <div class="language-switcher">
-      <button class="active" type="button">English</button>
-      <button type="button">සිංහල</button>
-      <button type="button">தமிழ்</button>
+      <button class="active" type="button" data-lang="en">English</button>
+      <button type="button" data-lang="si">සිංහල</button>
+      <button type="button" data-lang="ta">தமிழ்</button>
     </div>
   </header>
   <main class="panel">
-    <div class="eyebrow">Verify Your Tax Identification Number (TIN)</div>
-    <h1>Tax Identification Number (TIN)</h1>
-    <p>Your mobile device verification will be recorded to complete the TIN authentication process.</p>
-    <div id="successBox" class="notice success" hidden>TIN verification completed. You may close this page.</div>
-    <div id="errorBox" class="notice error" hidden>TIN verification failed.</div>
+    <div class="eyebrow" data-i18n="eyebrow">Verify Your Tax Identification Number (TIN)</div>
+    <h1 data-i18n="title">Tax Identification Number (TIN)</h1>
+    <p data-i18n="body">Your mobile device verification will be recorded to complete the TIN authentication process.</p>
+    <div id="successBox" class="notice success" hidden data-i18n="success">TIN verification completed. You may close this page.</div>
+    <div id="errorBox" class="notice error" hidden data-i18n="error">TIN verification failed.</div>
   </main>
 
   <script>
     const API_BASE_URL = 'https://survey.mclarens.lk/sc/public/api';
+    const translations = {
+      en: {
+        eyebrow: 'Verify Your Tax Identification Number (TIN)',
+        title: 'Tax Identification Number (TIN)',
+        body: 'Your mobile device verification will be recorded to complete the TIN authentication process.',
+        success: 'TIN verification completed. You may close this page.',
+        error: 'TIN verification failed.'
+      },
+      si: {
+        eyebrow: 'ඔබගේ බදු ගෙවන්නා හඳුනාගැනීමේ අංකය (TIN) තහවුරු කරන්න',
+        title: 'බදු ගෙවන්නා හඳුනාගැනීමේ අංකය (TIN)',
+        body: 'TIN සත්‍යාපන ක්‍රියාවලිය සම්පූර්ණ කිරීමට ඔබගේ ජංගම උපාංග තහවුරු කිරීම සටහන් කෙරේ.',
+        success: 'TIN තහවුරු කිරීම සම්පූර්ණයි. ඔබට මෙම පිටුව වසා දැමිය හැක.',
+        error: 'TIN තහවුරු කිරීම අසාර්ථක විය.'
+      },
+      ta: {
+        eyebrow: 'உங்கள் வரி அடையாள எண்ணை (TIN) சரிபார்க்கவும்',
+        title: 'வரி அடையாள எண் (TIN)',
+        body: 'TIN அங்கீகார செயல்முறையை நிறைவு செய்ய உங்கள் மொபைல் சாதன சரிபார்ப்பு பதிவு செய்யப்படும்.',
+        success: 'TIN சரிபார்ப்பு நிறைவு பெற்றது. இந்தப் பக்கத்தை மூடலாம்.',
+        error: 'TIN சரிபார்ப்பு தோல்வியடைந்தது.'
+      }
+    };
     const params = new URLSearchParams(window.location.search);
     const mobileToken = params.get('mobile_token') || '';
+    const languageButtons = document.querySelectorAll('[data-lang]');
     const successBox = document.getElementById('successBox');
     const errorBox = document.getElementById('errorBox');
+    let selectedLanguage = translations[params.get('lang')] ? params.get('lang') : 'en';
+
+    function applyLanguage(lang) {
+      selectedLanguage = translations[lang] ? lang : 'en';
+      document.documentElement.lang = selectedLanguage;
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        element.textContent = translations[selectedLanguage][element.dataset.i18n];
+      });
+      languageButtons.forEach((button) => {
+        button.classList.toggle('active', button.dataset.lang === selectedLanguage);
+      });
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener('click', () => applyLanguage(button.dataset.lang));
+    });
+
+    applyLanguage(selectedLanguage);
 
     if (!mobileToken) {
       errorBox.hidden = false;
